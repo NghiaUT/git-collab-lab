@@ -9,3 +9,5 @@
 ## Additional Features
 
 - Implment task filtering.
+
+Small changes on rebase-note/md to trigger conflict.
