@@ -3,9 +3,9 @@ export function getTask(id) {
   return tasks.find((t) => t.id === id);
 }
 
-export function createTask(title) {
+export function createTask(id, title) {
   const newTask = {
-    id: Date.now(),
+    id,
     title,
     status: "pending",
   };
@@ -13,14 +13,18 @@ export function createTask(title) {
   return newTask;
 }
 
-export function updateTask(id, title) {
-  const taskIndex = tasks.findIndex((t) => t.id === id && t.title === title);
-  if (!task) return;
+export function updateTask(id) {
+  const taskIndex = tasks.findIndex((t) => t.id === id);
+  if (taskIndex === -1) return;
   const task = tasks[taskIndex];
+  let nextStatus;
+  if (task.status === "pending") nextStatus = "in_progress";
+  if (task.status === "in_progress") nextStatus = "finished";
+  if (task.status === "finished") return "The task has finished";
   const updatedTask = {
     id: task.id,
     title: task.title,
-    status: "in_progress",
+    status: nextStatus,
   };
   tasks[taskIndex] = updatedTask;
   return updatedTask;
