@@ -25,3 +25,7 @@ export function updateTask(id, title) {
   tasks[taskIndex] = updatedTask;
   return updatedTask;
 }
+
+export function listTask() {
+  console.log("Sample console.log to resolve conflict.");
+}
