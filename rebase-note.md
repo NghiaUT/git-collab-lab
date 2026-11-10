@@ -5,3 +5,7 @@
 ## Feature Development
 
 - Implement task completion.
+
+## Additional Features
+
+- Implment task filtering.
