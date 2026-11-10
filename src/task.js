@@ -1,3 +1,4 @@
+task = [];
 export function getTask(id) {
   return {
     id,
