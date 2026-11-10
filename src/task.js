@@ -13,3 +13,10 @@ export function createTask(title) {
     status: "pending",
   };
 }
+
+export function updateTask(id, title) {
+  return {
+    id,
+    title,
+  };
+}
