@@ -27,5 +27,9 @@ export function updateTask(id, title) {
 }
 
 export function listTask() {
-  console.log("Sample console.log to resolve conflict.");
+  tasks.forEach((task) => {
+    console.log(
+      `Task #${task.id}: Title - ${task.title}, Status - ${task.status}`,
+    );
+  });
 }
