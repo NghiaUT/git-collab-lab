@@ -25,3 +25,11 @@ export function updateTask(id, title) {
   tasks[taskIndex] = updatedTask;
   return updatedTask;
 }
+
+export function listTask() {
+  tasks.forEach((task) => {
+    console.log(
+      `Task #${task.id}: Title - ${task.title}, Status - ${task.status}`,
+    );
+  });
+}
