@@ -1,4 +1,4 @@
-import { updateTask, createTask, getTask } from "./task";
+import { updateTask, createTask, getTask } from "./task.js";
 
 console.log(createTask("Đi chợ nấu cơm"));
 
